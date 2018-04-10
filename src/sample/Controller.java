@@ -1,9 +1,14 @@
 package sample;
-
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-
+/**public class "controller" which contain
+ * initialization methods and fields from FXML file.
+ * @param heightinput : the variable receives the user's height
+ * @param weightinput : the variable receives the user's weight
+ * @param bmiOutput : the variable contains the BMI indicator passed on the output
+ * @param statusOutput: the variable contains information about the type of body
+ */
 public class Controller {
 
     @FXML
@@ -18,7 +23,8 @@ public class Controller {
     @FXML
     private JFXTextField weightinput;
 
-
+    /**The method calculate BMI idex and transmit it to the method"setResult"
+     */
     @FXML
     void calculate(ActionEvent event) {
     try {
@@ -33,9 +39,11 @@ public class Controller {
     }
 
     }
+    /**The method prints the BMI idex and checks the type of body
+     */
+    @FXML
     void setResult(Double bmiValue){
         bmiOutput.setText(Double.toString(Math.round(bmiValue*100.0)/100.0));
-       // bmiOutput.setText(bmiValue.toString());
         if(bmiValue<=18.5){
             statusOutput.setText("Underweight");
         }
@@ -50,6 +58,8 @@ public class Controller {
         }
 
     }
+    /**The method closes the winow program after clicking the mouse
+    */
    @FXML
     void close(javafx.scene.input.MouseEvent mouseEvent) {
         System.exit(0);

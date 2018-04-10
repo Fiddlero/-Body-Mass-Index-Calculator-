@@ -5,8 +5,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-
+/**
+ *@version 2.0
+ *@author Fiddlero
+ */
 public class Main extends Application {
 
     @Override
@@ -17,9 +19,8 @@ public class Main extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
-
-
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         launch(args);
     }
 }
